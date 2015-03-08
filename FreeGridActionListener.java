@@ -287,7 +287,7 @@ public class FreeGridActionListener implements ActionListener{
 				System.out.println("Square was called");
             }
             if (pressed==7){
-            	System.out.println("Import was called");
+            	 System.out.println("Import was called");
             	 graphicsForDrawing = getGraphics();  // For drawing on the screen.
                  graphicsForDrawing.setColor(getCurrentColor());
 
@@ -335,14 +335,19 @@ public class FreeGridActionListener implements ActionListener{
                 int xcoord;
                 int ycoord;
                 while(s<xSize){
+
                 	xcoord=RenderedImageActionListener.xC.get(s);
                 	ycoord=RenderedImageActionListener.yC.get(s);
                 	FreeGridActionListener.xCoordinateTileList.add(xcoord/tileWidth);
                 	FreeGridActionListener.yCoordinateTileList.add(ycoord/tileHeight);
-                	
                 	s++;
                 }
-                System.out.println(xsize);
+                System.out.println("printing the FreGrid CordinateList");
+                //printing contents of the tile list before removing duplicates
+                for(int i=0;i<FreeGridActionListener.xCoordinateTileList.size();i++){
+                	
+                }
+
                 
                 //problem 2: removing the duplicates
                 for(int i=0;i<FreeGridActionListener.xCoordinateTileList.size();i++){
@@ -367,10 +372,14 @@ public class FreeGridActionListener implements ActionListener{
                 	offscreenGraphics.drawOval(RenderedImageActionListener.xC.get(i),RenderedImageActionListener.yC.get(i),3,3);
          
                 }
-                
+                FreeGridActionListener.isImageSaved=false;
+                FreeGridActionListener.isTileDataSaved=false;
+                FreeGridActionListener.isLatexSaved=false;
+                FreeGridActionListener.isTileDataSaved=false;
+                FreeGridActionListener.isPDFSaved=false;
+                MainFrame.isFreeSaved=false;
                 pressed=0;
                 System.out.println("\nrender is finished");
-                
             }
             //pressed=18 signifies canvas clear
             if (pressed==18){

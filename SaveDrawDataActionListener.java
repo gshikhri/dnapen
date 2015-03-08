@@ -33,11 +33,8 @@ public class SaveDrawDataActionListener implements ActionListener {
     BrickData Tiledata=new BrickData();
     @Override
     public void actionPerformed(ActionEvent e) {
-
-    	
     	
     	MainFrame.savedDataType='r';
-    	System.out.println("Count of listeners: " + (e.getSource()));    	
         BufferedWriter bufferedWriter = null;
         if (MainFrame.newProjectCreated==true)
         {
