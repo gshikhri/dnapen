@@ -292,10 +292,6 @@ public class MainFrame extends Frame{
         JMenuItem Import=new JMenuItem("Import Source File", new ImageIcon("images/import.png"));
         JMenuItem exitItem = new JMenuItem("Exit");
         
-        
-        
-        
-        
         fileMenu.add(newProject);
         fileMenu.add(new JSeparator());
         fileMenu.add(saveRandSeqItem);
@@ -396,7 +392,7 @@ public class MainFrame extends Frame{
         saveRandSeqItem.addActionListener(new SaveDrawDataActionListener());
         //saveOptimizedSeqItem.addActionListener(new SaveOptimizedSeq());
         savePDF.addActionListener(new PDFListener());
-        //renderImage.addActionListener(new RenderedImageActionListener());
+        renderImage.addActionListener(new RenderedImageActionListener());
         Export.addActionListener(new ExportActionListener());
         Import.addActionListener(new ImportActionListener());
         exitItem.addActionListener(new ExitItemListener());

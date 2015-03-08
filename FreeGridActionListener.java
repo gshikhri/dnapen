@@ -312,7 +312,7 @@ public class FreeGridActionListener implements ActionListener{
                 System.out.println("\nimport was called");
                 
             }
-           /* if (pressed==11){
+            if (pressed==11){
 
 	           	graphicsForDrawing = getGraphics();  // For drawing on the screen.
 	            graphicsForDrawing.setColor(getCurrentColor());
@@ -369,9 +369,9 @@ public class FreeGridActionListener implements ActionListener{
                 }
                 
                 pressed=0;
-                System.out.println("\nrender was called");
+                System.out.println("\nrender is finished");
                 
-            }*/
+            }
             //pressed=18 signifies canvas clear
             if (pressed==18){
                 System.out.print("Free Grid clear has been called 3");
